@@ -1,4 +1,4 @@
-package ListaDuplamenteLigada;
+package ListaLigadaSimples.ListaDuplamenteLigada;
 
 public class NoDuplo {
     private int info;
@@ -6,7 +6,7 @@ public class NoDuplo {
     private NoDuplo proximo;
 
     public NoDuplo (int info){
-        setInfo(info);
+        setInfo(info); //recebe  ainformação sobre o numero que será recebido
         setProximo(null);
         setAnterior(null);
     }

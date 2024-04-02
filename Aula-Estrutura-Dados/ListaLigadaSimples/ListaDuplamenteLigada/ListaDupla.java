@@ -1,4 +1,4 @@
-package ListaDuplamenteLigada;
+package ListaLigadaSimples.ListaDuplamenteLigada;
 
 public class ListaDupla {
     private NoDuplo primeiro;

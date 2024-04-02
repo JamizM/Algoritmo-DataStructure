@@ -1,3 +1,5 @@
+package ListaLigadaSimples;
+
 public class Lista {
     private No primeiro;
 

@@ -1,3 +1,5 @@
+package ListaLigadaSimples;
+
 //Aplicando conceitos de lista ligada
 public class No{
     private int info;

@@ -1,3 +1,5 @@
+package ListaLigadaSimples;
+
 public class ListaComUltimo extends Lista{
     private No ultimo; //ultimo elemento da lista 
     //construtor

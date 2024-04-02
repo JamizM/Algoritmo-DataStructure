@@ -1,4 +1,4 @@
-package ListaDuplamenteLigada;
+package ListaLigadaSimples.ListaDuplamenteLigada;
 import java.util.Random;
 
 public class TesteListaLigada {
