@@ -77,4 +77,28 @@ public class Lista {
 
         return i;
     }
+    public boolean removePrimeiraOcorrencia(int elemento){
+        if(listaEstaVazia()) return false;
+        if (primeiro.getInfo() == elemento){ //getInfo() pegar informação do dado la dentro para ver se bate com o elemento digitado
+            primeiro = primeiro.getProximo();
+            return true;
+        }
+        boolean achou = false; //mecanismo de busca
+        No ant = primeiro; //posicinado uma para tras 
+        No atual = primeiro.getProximo(); // proximo do valor que esta a traz
+        while(atual != null && !achou){
+            if(atual.getInfo() == elemento){ //elemento achado dentro da lista 
+                achou = true;
+            }
+            else{
+                ant = atual;
+                atual = atual.getProximo();
+            }
+            if(!achou) return false;
+            //ajustar ponteiros
+            ant.setProximo(atual.getProximo()); //se caso achou, ajustando vetor para o proximo do elemento que achou, para o proximo
+        }
+        return true;
+    }
+    
 }

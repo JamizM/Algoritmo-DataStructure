@@ -104,8 +104,23 @@ public class MeuVetor{
     }
     public boolean remove(double elemento){
         //remove a primeira ocorrencia do elemento e devolve sucesso ou fracasso
-        for (int i = 0; i < ultimaPos; i++){
-            
+        if(estaVazio()){
+            return false;
+        }
+        else{
+            boolean achou = false;
+            int i =0;
+            while(i<=ultimaPos && !achou){ //se vetor ve na posiacao, achou fica true && i faz parte do controle do for ( i assume varios papeis)
+                if (v[i] == elemento) achou = true;
+                i++;
+            }   
+            if (!achou) return false; //varredura se caso nao achar nada, a variavel achou permanece false
+            //arrastar os elementos
+            for (int j=1; j<ultimaPos; j++){
+                v[j] = v[j + 1];
+            }
+            ultimaPos--; //ajustar posicao
+            return true;
         }
     }
     public int removeALL(double elemento){

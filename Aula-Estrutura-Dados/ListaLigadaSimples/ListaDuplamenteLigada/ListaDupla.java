@@ -69,5 +69,36 @@ public class ListaDupla {
         }
         return s;
     }
+    public boolean removePrimeira(int x){
+        if(estaVazia()) return false;
+        if (primeiro.getInfo() == x){
+            primeiro = primeiro.getProximo();
+            if(primeiro == null){
+                ultimo = null;
+            }
+            else{
+                return false;
+            }
+        }
+
+        NoDuplo atual = primeiro.getProximo();
+        boolean achou = false;
+        while (atual != null &&  !achou){
+            if(atual.getInfo() == x) achou = true;
+            else{
+                atual = atual.getProximo();
+            }
+        } 
+        if(!achou) return false;
+        if(atual == ultimo){
+            ultimo = ultimo.getAnterior(); //ajuste de ponteiro para o anterior no atual que ele ta
+            ultimo.setProximo(null);//ajusta de ponteiro para o proximo do atual que ele esta
+        }
+        else{   
+            atual.getProximo().setProximo(atual.getProximo());
+            atual.getProximo().setAnterior(atual.getAnterior());
+        }
+        return true;
+    }
     
 }
