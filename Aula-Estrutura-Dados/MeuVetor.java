@@ -115,6 +115,7 @@ public class MeuVetor{
                 i++;
             }   
             if (!achou) return false; //varredura se caso nao achar nada, a variavel achou permanece false
+
             //arrastar os elementos
             for (int j=1; j<ultimaPos; j++){
                 v[j] = v[j + 1];
@@ -125,6 +126,7 @@ public class MeuVetor{
     }
     public int removeALL(double elemento){
         //remove todas as ocorrencias do elemento e devolve quantos foram removidos
+        return 0;
     }
     private void redimensiona(int novaCapacidade){
         double[] temp = new double[novaCapacidade];
