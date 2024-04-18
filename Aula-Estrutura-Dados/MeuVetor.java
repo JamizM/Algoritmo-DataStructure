@@ -125,8 +125,25 @@ public class MeuVetor{
         }
     }
     public int removeALL(double elemento){
-        //remove todas as ocorrencias do elemento e devolve quantos foram removidos
-        return 0;
+    //remove todas as ocorrencias do elemento e devolve quantos foram removidos
+    int count = 0; 
+    // Iterar pelo vetor e remover todas as ocorrências do elemento
+    for (int i = 0; i <= ultimaPos; i++) {
+        if (v[i] == elemento) {
+            // Se encontrarmos uma ocorrência do elemento, removemos
+            for (int j = i; j < ultimaPos; j++) {
+                v[j] = v[j + 1]; // Deslocar os elementos à esquerda
+            }
+            ultimaPos--; // Atualizar a última posição ocupada
+            count++; // Incrementar o contador de elementos removidos
+            i--; // Decrementar o índice para verificar novamente a posição atual
+        }
+        }
+        // Verificar se o vetor precisa ser redimensionado
+        if (v.length >= 10 && ultimaPos < v.length / 4) {
+            redimensiona(v.length / 2);
+        }
+         return count; // Retornar o número total de elementos removido
     }
     private void redimensiona(int novaCapacidade){
         double[] temp = new double[novaCapacidade];
