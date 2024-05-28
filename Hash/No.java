@@ -1,23 +1,22 @@
-package ListaLigadaSimples;
 
 //Aplicando conceitos de lista ligada
 public class No{
-    private int info;
+    private Pessoa info;
     private No proximo;//definição recursiva
     //construtor para armazenar uma informação
-    public No (int info){
+    public No (Pessoa info){
         this.info = info;
         setProximo(null); //escrever por clareza 
     }
     //getters
-    public int getInfo(){
+    public Pessoa getInfo(){
         return info;
     }
     public No getProximo(){ //obtenha endereço do proximo elemento
         return proximo;
     }
     //setters
-    public void setInfo(int info){
+    public void setInfo(Pessoa info){
         this.info = info;
     }
     public void setProximo(No proximo){ //passa uma referencia ao getProximo, atribui a ele
