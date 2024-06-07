@@ -1,18 +1,17 @@
 import java.util.Scanner;
-
-public class Bee1046{
+public class Bee1046 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int inicio = sc.nextInt();
-        int fim = sc.nextInt();
-        sc.close();
-        if(inicio < fim){
+        Scanner scanner = new Scanner(System.in);
+        int inicio = scanner.nextInt();
+        int fim = scanner.nextInt();
+        scanner.close();
+        if (inicio < fim) {
             System.out.println("O JOGO DUROU " + (fim - inicio) + " HORA(S)");
         }
-        else if(inicio == fim){ 
+        else if (inicio == fim) {
             System.out.println("O JOGO DUROU 24 HORA(S)");
         }
-        else{   
+        else {
             System.out.println("O JOGO DUROU " + (24 + fim - inicio) + " HORA(S)");
         }
     }

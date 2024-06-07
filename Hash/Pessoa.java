@@ -1,9 +1,9 @@
 public class Pessoa {
     private String nome;
-    private Integer anoNascido;
-    public Pessoa(String nome, Integer anoNascido) {
+    private int anoNascimento;
+    public Pessoa(String nome, int anoNascimento) {
         this.nome = nome;
-        this.anoNascido = anoNascido;
+        this.anoNascimento = anoNascimento;
     }
     public String getNome() {
         return nome;
@@ -11,26 +11,23 @@ public class Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public Integer getAnoNascido() {
-        return anoNascido;
+    public int getAnoNascimento() {
+        return anoNascimento;
     }
-    public void setAnoNascido(Integer anoNascido) {
-        this.anoNascido = anoNascido;
+    public void setAnoNascimento(int anoNascimento) {
+        this.anoNascimento = anoNascimento;
     }
     @Override
     public String toString() {
-        return "Pessoa [nome=" + nome + ", anoNascido=" + anoNascido + "]";
+        return "[nome=" + nome + ", anoNascimento=" + anoNascimento + "]";
     }
     @Override
-    public boolean equals(Object obj){
-        if(obj == this){
-            return true;
+    public boolean equals (Object object) {
+        if (object == this) return true;
+        if (object instanceof Pessoa) {
+            Pessoa pessoa = (Pessoa) object;
+            if (this.getNome() == pessoa.getNome()) return true;
         }
-        if(obj instanceof Pessoa){
-            Pessoa pessoa = (Pessoa) obj;
-            if(this.nome == pessoa.getNome())return true;
-        } 
         return false;
     }
-    
 }

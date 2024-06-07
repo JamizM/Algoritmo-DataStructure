@@ -1,22 +1,25 @@
 public class TesteComLista {
     public static void main(String[] args) {
-        Agenda agenda = new Agenda(); //instanciado 26 posicao
-        Pessoa pessoa1 = new Pessoa("rodrigo", 1920);
-        agenda.insere(pessoa1); //inserido dentro da lista 
-
+        AgendaComLista agenda = new AgendaComLista();
+        Pessoa p1 = new Pessoa("Ana", 2000);
+        agenda.insere(p1);
         System.out.println(agenda);
-        if(agenda.existe(pessoa1)){
-            System.out.println(pessoa1 + " esta na lista de contatos");
-        }
-        else{
-            System.out.println(pessoa1 + " nao esta dentro da lista");
-        }
-        Pessoa pessoa2 = new Pessoa("MC kevin", 2022);
-        if(agenda.existe(pessoa2)){
-            System.out.println(pessoa2 + " esta na lista de contatos");
-        }
-        else{
-            System.out.println(pessoa2 + " nao esta dentro da lista");
-        }
+        // if (agenda.existe(p1)) {
+        //     System.out.println(p1 + " esta na lista de cotatos");
+        // }
+        // else {
+        //     System.out.println(p1 + " nao esta na sua lista de contatos");
+        // }
+        Pessoa p2 = new Pessoa("Bia", 2010);
+        agenda.insere(p2);
+        // if (agenda.existe(p2)) {
+        //     System.out.println(p2 + " esta na lista de cotatos");
+        // }
+        // else {
+        //     System.out.println(p2 + " nao esta na sua lista de contatos");
+        // }
+        Pessoa p3 = new Pessoa("Antonio", 2001);
+        agenda.insere(p3);
+        System.out.println(agenda);
     }
 }

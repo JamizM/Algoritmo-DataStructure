@@ -1,18 +1,18 @@
 public class No {
-    private Pessoa info;
+    private int info;
     private No proximo;
     //construtor para armazenar uma informação
-    public No (Pessoa info) {
+    public No (int info) {
         this.info = info;
         setProximo(null); //por clareza
     }
-    public Pessoa getInfo() {
+    public int getInfo() {
         return info;
     }
     public No getProximo () {
         return proximo;
     }
-    public void setInfo (Pessoa info) {
+    public void setInfo (int info) {
         this.info = info;
     }
     public void setProximo (No proximo) {
@@ -20,6 +20,6 @@ public class No {
     }
     @Override
     public String toString() {
-        return "|" + info + "| ";
+        return "|" + info + "|->";
     }
 }
